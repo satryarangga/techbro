@@ -44,7 +44,7 @@
   <link href="lib/animate-css/animate.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css?v=0.0.3" rel="stylesheet">
+  <link href="css/style.css?v=0.0.4" rel="stylesheet">
 
 </head>
 
@@ -225,43 +225,54 @@
 
       <div class="row">
         <div class="col-md-3">
-          <a class="portfolio-item" style="background-image: url(img/portofolios/rk.png);" target="_blank" href="https://rivankurniawan.com">
+          <div class="portfolio-item" style="background-image: url(img/portofolios/rk.png);" data-modal="rk-modal">
             <div class="details">
-              <h4>Membership Website for Rivan Kurniawan</h4>
+              <h4>Membership Website for an Indonesian Investment Influencer</h4>
+              <a href="https://rivankurniawan.com" target="_blank" class="portfolio-link">Visit Website</a>
             </div>
-          </a>
+          </div>
         </div>
 
         <div class="col-md-3">
-          <a class="portfolio-item" style="background-image: url(img/portofolios/genflix.png);" target="_blank" href="https://genflix.co.id">
+          <div class="portfolio-item" style="background-image: url(img/portofolios/genflix.png);" data-modal="genflix-modal">
             <div class="details">
-              <h4>Genflix - Content Streaming Website</h4>
+              <h4>Movies and TV Shows Streaming Website</h4>
+              <a href="https://genflix.co.id" target="_blank" class="portfolio-link">Visit Website</a>
             </div>
-          </a>
+          </div>
         </div>
 
         <div class="col-md-3">
-          <a class="portfolio-item" style="background-image: url(img/portofolios/dharmamotor.png);" target="_blank" href="https://dharmamotortama.com">
+          <div class="portfolio-item" style="background-image: url(img/portofolios/dharmamotor.png);" data-modal="dharmamotor-modal">
             <div class="details">
-              <h4>Dharmamotor - Machinery & Industrial Equipment Website</h4>
+              <h4>Machinery & Industrial Equipment Company Profile Website</h4>
+              <a href="https://dharmamotortama.com" target="_blank" class="portfolio-link">Visit Website</a>
             </div>
-          </a>
+          </div>
         </div>
 
         <div class="col-md-3">
-          <a class="portfolio-item" style="background-image: url(img/portofolios/bfast.png);" target="_blank">
+          <div class="portfolio-item" style="background-image: url(img/portofolios/bfast.png);" data-modal="bfast-modal">
             <div class="details">
               <h4>ERP System for Beauty Clinic</h4>
             </div>
-          </a>
+          </div>
         </div>
 
         <div class="col-md-3">
-          <a class="portfolio-item" style="background-image: url(img/portofolios/amala-app.png);">
+          <div class="portfolio-item" style="background-image: url(img/portofolios/amala-app.png);" data-modal="amala-modal">
             <div class="details">
               <h4>Beauty Clinic Customer Experience App</h4>
             </div>
-          </a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="portfolio-item" style="background-image: url(img/portofolios/agent-app.png);" data-modal="agent-modal">
+            <div class="details">
+              <h4>B2B Sales agent app</h4>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -452,6 +463,82 @@
 
   <script src="contactform/contactform.js"></script>
 
+  <!-- Portfolio Modals -->
+  <div id="rk-modal" class="portfolio-modal">
+    <span class="portfolio-modal-close">&times;</span>
+    <img class="portfolio-modal-content" src="img/portofolios/rk.png">
+    <div class="portfolio-modal-caption">Membership Website for an Indonesian Investment Influencer</div>
+  </div>
+
+  <div id="genflix-modal" class="portfolio-modal">
+    <span class="portfolio-modal-close">&times;</span>
+    <img class="portfolio-modal-content" src="img/portofolios/genflix.png">
+    <div class="portfolio-modal-caption">Movies and TV Shows Streaming Website</div>
+  </div>
+
+  <div id="dharmamotor-modal" class="portfolio-modal">
+    <span class="portfolio-modal-close">&times;</span>
+    <img class="portfolio-modal-content" src="img/portofolios/dharmamotor.png">
+    <div class="portfolio-modal-caption">Machinery & Industrial Equipment Company Profile Website</div>
+  </div>
+
+  <div id="bfast-modal" class="portfolio-modal">
+    <span class="portfolio-modal-close">&times;</span>
+    <img class="portfolio-modal-content" src="img/portofolios/bfast.png">
+    <div class="portfolio-modal-caption">ERP System for Beauty Clinic</div>
+  </div>
+
+  <div id="amala-modal" class="portfolio-modal">
+    <span class="portfolio-modal-close">&times;</span>
+    <img class="portfolio-modal-content" src="img/portofolios/amala-app.png">
+    <div class="portfolio-modal-caption">Beauty Clinic Customer Experience App</div>
+  </div>
+
+  <div id="agent-modal" class="portfolio-modal">
+    <span class="portfolio-modal-close">&times;</span>
+    <img class="portfolio-modal-content" src="img/portofolios/agent-app.png">
+    <div class="portfolio-modal-caption">B2B Sales Agent App</div>
+  </div>
+
+  <!-- Add this before the closing body tag -->
+  <script>
+    // Get all portfolio items
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    // Add click event listeners
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        // If the click is on a link, don't show modal
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          return;
+        }
+        
+        e.preventDefault();
+        const modalId = this.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = "block";
+        }
+      });
+    });
+
+    // Get all modal close buttons
+    const closeButtons = document.querySelectorAll('.portfolio-modal-close');
+    
+    // Add click event listeners to close buttons
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        this.parentElement.style.display = "none";
+      });
+    });
+
+    // Close modal when clicking outside the image
+    window.addEventListener('click', function(e) {
+      if (e.target.classList.contains('portfolio-modal')) {
+        e.target.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>
