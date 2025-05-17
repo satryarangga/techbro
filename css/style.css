@@ -610,7 +610,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid #000;
+  border: 1px solid #e3e3e3;
   border-radius: 10px;
   position: relative;
   height: 260px;
