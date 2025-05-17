@@ -55,22 +55,64 @@
 <!--==========================
   Hero Section
 ============================-->
-  <section id="hero">
-    <div class="hero-container">
+  <section id="hero" style="background: linear-gradient(135deg, #ffffff 0%, #e3e8ec 50%, #d1d8e0 100%); position: relative; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+    <div class="hero-container" style="position: relative; z-index: 1;">
       <div class="wow fadeIn">
-        <div class="hero-logo">
-          <img class="" src="img/techbro-logo.png" alt="Imperial">
+        <div class="hero-logo" style="margin-bottom: 30px;">
+          <img src="img/techbro-logo.png" alt="Techbro Studio" style="max-width: 200px;">
         </div>
 
-        <h1>Welcome to Techbro Studio</h1>
-        <h2>I provide <span class="rotating">website and mobile apps development, cloud infrastructure setup and management, startup or IT consultancy</span></h2>
-        <div class="actions">
-          <a href="#about" class="btn-get-started">About Me</a>
-          <a href="#services" class="btn-services">My Services</a>
+        <h1 style="color: #2c3e50; margin-bottom: 20px; font-weight: 700;">Transform Your Digital Vision Into Reality</h1>
+        <h2 style="color: #34495e; margin-bottom: 30px;">Your trusted partner for <span class="rotating" style="color: #3498db; font-weight: 600;">web development, mobile apps, cloud solutions, startup consulting, IT strategy, digital transformation</span></h2>
+        <div class="actions" style="margin-top: 40px;">
+          <a href="#about" class="btn-get-started" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: #fff; padding: 12px 30px; border-radius: 6px; transition: all 0.3s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(52,152,219,0.3);">Get to Know Me</a>
+          <a href="#contact" class="btn-services" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); color: #2c3e50; padding: 12px 30px; border-radius: 6px; margin-left: 15px; transition: all 0.3s ease; text-decoration: none; border: 1px solid #e9ecef; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">Let's Talk</a>
         </div>
       </div>
     </div>
+    <div style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url('img/hero-pattern.svg') repeat; opacity: 0.1; z-index: 0;"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 150px; background: linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%); z-index: 0;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%); z-index: 0;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(52,152,219,0.05) 0%, rgba(52,152,219,0) 100%); z-index: 0;"></div>
   </section>
+
+  <style>
+    .btn-get-started:hover {
+      background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52,152,219,0.4) !important;
+    }
+    .btn-services:hover {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+    }
+    .rotating {
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+    .rotating::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(52,152,219,0) 0%, rgba(52,152,219,0.5) 50%, rgba(52,152,219,0) 100%);
+    }
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 28px;
+      }
+      #hero h2 {
+        font-size: 18px;
+      }
+      .hero-logo img {
+        max-width: 150px;
+      }
+    }
+  </style>
 
 <!--==========================
   Header Section
