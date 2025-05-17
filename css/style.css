@@ -477,6 +477,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 20px;
 }
 
+.section-description a {
+  color: #03C4EB;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.section-description a:hover {
+  color: #25d8fc;
+  text-decoration: none;
+}
+
+.section-description i {
+  margin-right: 5px;
+}
+
 /* Get Started Section
 --------------------------------*/
 #about {
@@ -504,6 +519,32 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-text:last-child {
   margin-bottom: 0;
+}
+
+.about-cta {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-linkedin {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #0077b5;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-linkedin:hover {
+  background: #03C4EB;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-linkedin i {
+  margin-right: 8px;
 }
 
 /* Services Section
@@ -740,6 +781,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: -9px;
   position: relative;
   top: 4px;
+}
+
+#testimonials .profile .social {
+  margin-top: 15px;
+}
+
+#testimonials .profile .social a {
+  color: #03C4EB;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+#testimonials .profile .social a:hover {
+  color: #25d8fc;
 }
 
 /* Team Section
