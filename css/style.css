@@ -522,6 +522,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-text {
   line-height: 26px;
+  text-align: justify;
 }
 
 #about .about-text:last-child {
