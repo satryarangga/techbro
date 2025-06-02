@@ -680,6 +680,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #portfolio .row > div:nth-child(6) .portfolio-item { background-color: #ffebee; }  /* Vibrant light red */
 #portfolio .row > div:nth-child(7) .portfolio-item { background-color: #e0f2f1; }  /* Vibrant light green */
 #portfolio .row > div:nth-child(8) .portfolio-item { background-color: #fffde7; }  /* Vibrant light yellow */
+#portfolio .row > div:nth-child(9) .portfolio-item { background-color: #e1f5fe; }  /* Vibrant light blue */
+#portfolio .row > div:nth-child(10) .portfolio-item { background-color: #e0f2f1; }  /* Vibrant light green */
+#portfolio .row > div:nth-child(11) .portfolio-item { background-color: #fffde7; }  /* Vibrant light yellow */
+#portfolio .row > div:nth-child(12) .portfolio-item { background-color: #e1f5fe; }  /* Vibrant light blue */
 
 #portfolio .portfolio-item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
